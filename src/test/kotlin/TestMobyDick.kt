@@ -11,12 +11,13 @@ class TestMobyDick {
         val wordCounts = mobydick.wordCounts(text)
 
         Assert.assertEquals(
-                wordCounts.take(5),
-                listOf("the" to 14440,
-                        "of" to 6653,
-                        "and" to 6398,
-                        "a" to 4673,
-                        "to" to 4620))
+            listOf("the" to 14440,
+                    "of" to 6653,
+                    "and" to 6398,
+                    "a" to 4673,
+                    "to" to 4620),
+            wordCounts.take(5)
+        )
     }
 
 }
