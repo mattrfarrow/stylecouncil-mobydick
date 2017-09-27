@@ -12,9 +12,10 @@ fun main(args: Array<String>) {
 
 fun wordCounts(text: String): List<Pair<String,Int>> {
     val delimiters = arrayOf(" ", "\n")
-    val words = text.split(*delimiters)
-    return words
+    val words = text
+        .split(*delimiters)
         .map { it.toLowerCase() }
+    return words
         .groupingBy { it } .eachCount()
         .map { it.toPair() }
         .sortedByDescending { it.second }
